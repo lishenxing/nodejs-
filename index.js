@@ -30,7 +30,7 @@ var server = http.createServer(function(request, response){
 	response.end(htmlString)
   }else if(path === '/style.css'){
 	  var cssString = fs.readFileSync('./b.css','utf-8')
-	  response.setHeader('Content-Type','html/css;charset=utf-8')
+	  response.setHeader('Content-Type','text/css;charset=utf-8')
 	  response.end(cssString)
   }else if(path === '/main.js'){
 	  var jsString = fs.readFileSync('./c.js','utf-8') 
